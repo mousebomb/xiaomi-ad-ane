@@ -1,0 +1,15 @@
+<platform xmlns="http://ns.adobe.com/air/extension/21.0"> 
+    <packagedDependencies>
+        <packagedDependency>AdSdk.jar</packagedDependency>
+    </packagedDependencies> 
+    <packagedResources>
+        <packagedResource>
+            <packageName>org.mousebomb.ane.miad</packageName> 
+            <folderName>res</folderName>
+        </packagedResource> 
+     <!--<packagedResource> 
+            <packageName>com.google.android.gms</packageName> 
+            <folderName>google-play-services-res</folderName> 
+        </packagedResource>-->
+    </packagedResources>
+</platform>
