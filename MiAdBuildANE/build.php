@@ -48,7 +48,7 @@ exec ( sprintf("unzip -o %s -d %s" , T."/lib.swc" , T."/"));
 copy(T."/library.swf",T."/android/library.swf");
 rename(T."/library.swf",T."/default/library.swf");
 
-$cmd = sprintf("/Users/rhett/MyWork/sdks/FlexSDK/4.6.0_AIR21/bin/adt -package -target ane %s.ane extension.xml -swc %s -platform Android-ARM -platformoptions platform-android.xml -C %s . -platform default -C %s .", "MiAd", T."/lib.swc",T."/android/",T."/default/");
+$cmd = sprintf("/Users/rhett/MyWork/sdks/FlexSDK/4.6.0_AIR/bin/adt -package -target ane %s.ane extension.xml -swc %s -platform Android-ARM -platformoptions platform-android.xml -C %s . -platform default -C %s .", "MiAd", T."/lib.swc",T."/android/",T."/default/");
 #$cmd = sprintf("/Users/rhett/MyWork/sdks/FlexSDK/4.6.0_AIR17/bin/adt -package -target ane %s.ane extension.xml -swc %s -platform Android-ARM -platformoptions platform-android.xml %s %s %s -C %s . -platform default -C %s .", "Umeng", T."/lib.swc",C."/umeng-analytics-v6.0.1.jar",C."/android-support-v4.jar",C."/utdid4all-1.0.4.jar",T."/android/",T."/default/");
 //$cmd = sprintf("/Users/rhett/MyWork/sdks/FlexSDK/4.6.0_AIR17/bin/adt -package -target ane %s.ane extension.xml -swc %s -platform Android-ARM   -C %s . -platform default -C %s .", "Umeng", T."/lib.swc",T."/android/",T."/default/");
 echo $cmd."\n";

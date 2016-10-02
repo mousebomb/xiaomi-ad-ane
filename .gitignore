@@ -13,3 +13,4 @@
 .idea
 /MiAdTest/out/production/MiAdTest/Main.apk
 /MiAdTest/out/production/MiAdTest/Main.swf
+*.tmp

@@ -59,5 +59,10 @@ package org.mousebomb.ane.miad
 			_context.call("cacheInterstitial" );
 		}
 
+		public function isInterstitialReady():Boolean
+		{
+			return _context.call("isInterstitialReady") as Boolean;
+		}
+
 	}
 }

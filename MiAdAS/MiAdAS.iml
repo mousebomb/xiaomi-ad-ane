@@ -4,9 +4,11 @@
     <configurations>
       <configuration name="MiAdSwc" target-platform="Mobile" pure-as="true" output-type="Library" output-file="MiAdSwc.swc" output-folder="$MODULE_DIR$/out/production/MiAdAS">
         <dependencies>
-          <sdk name="4.6.0_air21" />
+          <sdk name="4.6.0_air" />
         </dependencies>
-        <compiler-options />
+        <compiler-options>
+          <option name="additionalOptions" value="-swf-version 28" />
+        </compiler-options>
         <packaging-air-desktop />
         <packaging-android />
         <packaging-ios />
@@ -19,7 +21,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="4.6.0_air21" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="jdk" jdkName="4.6.0_air" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

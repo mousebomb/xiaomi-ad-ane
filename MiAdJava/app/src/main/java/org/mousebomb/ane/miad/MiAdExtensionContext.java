@@ -57,6 +57,7 @@ public class MiAdExtensionContext extends FREContext
 		functions.put("showInterstitial", new MiAdShowInterstitialFunction());
 		functions.put("cacheInterstitial", new MiAdCacheInterstitialFunction());
 		functions.put("setDebugMode", new MiAdSetDebugModeFunction());
+		functions.put("isInterstitialReady", new MiAdIsInterstitialReadyFunction());
 
 		return functions;
 	}
@@ -154,6 +155,11 @@ public class MiAdExtensionContext extends FREContext
 	}
 	private InterstitialAd mInterstitialAd;
 
+	public Boolean isInterstitialReady()
+	{
+		return (mInterstitialAd!=null && mInterstitialAd.isReady());
+	}
+	//
 
     private void logD( String txt )
     {
