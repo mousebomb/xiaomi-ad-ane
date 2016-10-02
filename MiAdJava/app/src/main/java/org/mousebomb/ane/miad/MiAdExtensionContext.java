@@ -82,7 +82,7 @@ public class MiAdExtensionContext extends FREContext
 		cInterstitialID = interstitialID;
 		//第一次 初始化并 显示开屏
         if(isInited) return;
-        AdSdk.initialize(getActivity() , cAppID);
+        AdSdk.initialize(getActivity().getApplication() , cAppID);
 		showSplashAd();
         isInited = true;
     }
@@ -96,8 +96,8 @@ public class MiAdExtensionContext extends FREContext
 	// 开屏
 	public void showSplashAd()
 	{
-		Intent intent = new Intent(getActivity(), SplashActivity.class);
-		getActivity().startActivity(intent);
+		Intent intent = new Intent(getActivity().getApplicationContext(), SplashActivity.class);
+		getActivity().getApplicationContext().startActivity(intent);
 	}
 
 
