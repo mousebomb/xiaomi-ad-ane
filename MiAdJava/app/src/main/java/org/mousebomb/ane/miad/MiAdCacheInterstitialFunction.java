@@ -9,7 +9,7 @@ import com.adobe.fre.FREObject;
 public class MiAdCacheInterstitialFunction extends BaseFunction {
 
 
-    private static final String TAG = "MiAdSetDebugModeFunction";
+    private static final String TAG = "MiAdCacheInterstitialFunction";
 
     @Override
     public FREObject call(FREContext context, FREObject[] args) {

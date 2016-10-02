@@ -10,3 +10,6 @@
 /MiAdJava/.idea/modules.xml
 /MiAdJava/.idea/runConfigurations.xml
 /MiAdBuildANE/temp
+.idea
+/MiAdTest/out/production/MiAdTest/Main.apk
+/MiAdTest/out/production/MiAdTest/Main.swf

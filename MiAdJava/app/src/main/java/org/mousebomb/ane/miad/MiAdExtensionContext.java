@@ -26,6 +26,7 @@ import android.widget.Toast;
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.xiaomi.ad.AdListener;
+import com.xiaomi.ad.AdSdk;
 import com.xiaomi.ad.Interstitial.InterstitialAd;
 import com.xiaomi.ad.common.pojo.AdError;
 import com.xiaomi.ad.common.pojo.AdEvent;
@@ -65,6 +66,10 @@ public class MiAdExtensionContext extends FREContext
 	public void setDebugMode(Boolean b)
 	{
 		isDebugMode = b;
+        if(b) {
+            AdSdk.setDebugOn();
+            AdSdk.setMockOn();
+        }
 	}
 
 
@@ -74,23 +79,25 @@ public class MiAdExtensionContext extends FREContext
 		cAppID = appID;
 		cSplashID=splashID;
 		cInterstitialID = interstitialID;
-		//第一次 显示开屏
+		//第一次 初始化并 显示开屏
+        if(isInited) return;
+        AdSdk.initialize(getActivity() , cAppID);
 		showSplashAd();
-	}
-	public static String cAppID;
+        isInited = true;
+    }
+    private Boolean isInited = false;
+
+    public static String cAppID;
 	public static String cSplashID;
 	public static String cInterstitialID;
 
 
-	//开屏
+	// 开屏
 	public void showSplashAd()
 	{
-		if(isSplashShown) return;
 		Intent intent = new Intent(getActivity(), SplashActivity.class);
 		getActivity().startActivity(intent);
-		isSplashShown = true;
 	}
-	private Boolean isSplashShown = false;
 
 
 	public void cacheInterstitial()
